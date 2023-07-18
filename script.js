@@ -1,6 +1,5 @@
-//your JS code here. If required.
-function myfunction() {
-	const dropdown = document.getElementById("colorSelect");
-      const selectedIndex = dropdown.selectedIndex;
-      dropdown.remove(selectedIndex);
+function removeColor() {
+  const colorSelect = document.getElementById('colorSelect');
+  const selectedOption = colorSelect.options[colorSelect.selectedIndex];
+  colorSelect.remove(selectedOption.index);
 }
