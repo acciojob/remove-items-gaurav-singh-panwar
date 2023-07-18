@@ -1,5 +1,8 @@
-function removeColor() {
+function removeSelectedOptions() {
   const colorSelect = document.getElementById('colorSelect');
-  const selectedOption = colorSelect.options[colorSelect.selectedIndex];
-  colorSelect.remove(selectedOption.index);
+  const selectedOptions = Array.from(colorSelect.selectedOptions);
+  
+  selectedOptions.forEach((option) => {
+    colorSelect.removeChild(option);
+  });
 }
